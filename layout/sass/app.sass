@@ -1,6 +1,42 @@
+@import 'partials/imports'
 @import 'partials/mixins/flex'
 @import 'partials/mixins/btn'
 
+.wrapper
+	max-width: 1140px
+	width: 100%
+	margin: 0 auto
+
 /* ------ front page ------ */
 
-
+.title 
+	+fz-biggest
+.cat-title
+	+fz-big
+.article-title
+	+fz-normal 
+.header
+	+d-flex
+	+justify-between
+	+align-center
+	padding: 20px 0
+.logo-box
+	a 
+		display: inline-block
+	img
+		width: 144px
+.site-descr
+	display: inline-block
+	color: $descr
+	margin:
+		left: 10px
+		right: 20px
+.header-form
+	input[type="search"]
+		width: 360px
+.search-btn
+	border: none
+	background: url(../images/icons/search.svg) center no-repeat
+	width: 30px
+	position: absolute
+	right: 0

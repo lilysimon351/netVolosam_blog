@@ -1,14 +1,10 @@
-@import '../partials/colors'
-@import '../partials/mixins/font-size'
-@import '../partials/mixins/list'
-@import '../partials/mixins/grad'
-@import '../partials/mixins/form'
+@import '../partials/imports'
 @font-face
 	font-family: 'Futura PT'
-	src: local('Futura PT Light'), local('Futura-PT-Light')
-	src: url('../fonts/FuturaPT-Light.woff2') format('woff2')
-	src: url('../fonts/FuturaPT-Light.woff') format('woff')
-	src: url('../fonts/FuturaPT-Light.ttf') format('truetype')
+	src: local('Futura PT Book'), local('Futura PT Book')
+	src: url('../../fonts/FuturaPT-Book.woff2') format('woff2')
+	src: url('../../fonts/FuturaPT-Book.woff') format('woff')
+	src: url('../../fonts/FuturaPT-Book.ttf') format('truetype')
 	font-weight: 300
 	font-style: normal
 
@@ -68,8 +64,10 @@ input, textarea
 	+fz-small
 input[type="search"]
 	border: 1px solid #9b9b9b
-	+placeholder
-		font-weight: bold
+	padding-right: 40px
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]:focus::-webkit-search-cancel-button
+	-webkit-appearance: none
 button, [type=button]
 	background: none
 	display: inline-block
