@@ -1,0 +1,12 @@
+=btn($grad)
+	@if $grad		
+		+grad(true, true)
+		&:hover
+			color: $btn-hover
+			+make-gradient(background, 87.8deg, $comb)
+	@else
+		border: 1px solid $non-akcent
+		color: $text 
+		&:hover
+			background: $non-akcent
+			color: white

@@ -1,0 +1,84 @@
+@import '../partials/colors'
+@import '../partials/mixins/font-size'
+@import '../partials/mixins/list'
+@import '../partials/mixins/grad'
+@import '../partials/mixins/form'
+@font-face
+	font-family: 'Futura PT'
+	src: local('Futura PT Light'), local('Futura-PT-Light')
+	src: url('../fonts/FuturaPT-Light.woff2') format('woff2')
+	src: url('../fonts/FuturaPT-Light.woff') format('woff')
+	src: url('../fonts/FuturaPT-Light.ttf') format('truetype')
+	font-weight: 300
+	font-style: normal
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	position: relative
+	padding: 0
+	margin: 0
+body
+	font-family: 'Futura PT', sans-serif
+	font-weight: normal
+	+fz-normal
+	color: $text
+	word-break: break-word
+	
+article, aside, blockquote, canvas, fieldset, figure, iframe, p, pre, table, video, audio, h1, h2, h3, h4, h5, h6
+	margin-bottom: 25px
+a 
+	color: inherit
+	font-size: inherit
+	text-decoration: none
+	&:hover 
+		color: $link
+h1 
+	+fz-biggest
+h2
+	+fz-bigger
+h3 
+	+fz-big 
+h4, h5, h6 
+	+fz-small
+h1, h2, h3, h4, h5, h6
+	color: $title
+img
+	display: inline-block
+	border: none
+	max-width: 100%
+	height: auto
+	margin:
+		left: auto
+		right: auto
+ol, ul
+	margin: 15px 0
+	& li:before
+		display: inline-block
+		vertical-align: middle
+ol ol
+	margin-left: 15px
+ul 
+	+list('leg')
+ol 
+	+list('grad')
+input, textarea
+	+input
+	+fz-small
+input[type="search"]
+	border: 1px solid #9b9b9b
+	+placeholder
+		font-weight: bold
+button, [type=button]
+	background: none
+	display: inline-block
+	padding: 10px 20px
+	border: 1px solid $non-akcent
+	border-radius: 10px
+table
+	width: 100%
+table, tr, td, th, caption
+	border: 1px solid $text 
+td, th 
+	padding: 5px 10px

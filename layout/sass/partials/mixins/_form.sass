@@ -1,0 +1,19 @@
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+=input
+	background: none
+	display: block
+	border: 1px solid $non-akcent
+	border-radius: 10px
+	padding: 15px 25px 
+	color: $input
+	&
+		+placeholder
+			color: $input
