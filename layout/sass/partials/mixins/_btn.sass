@@ -1,7 +1,13 @@
-=btn($grad)
-	@if $grad		
-		+grad(true, true)
+=btn($is-grad, $is-grad-text, $is-grad-border)
+	cursor: pointer
+	+fz-small
+	outline-offset: 0
+	outline: none
+
+	@if $is-grad 		
+		+grad($is-grad-text, $is-grad-border)
 		&:hover
+			-webkit-text-fill-color: $btn-hover
 			color: $btn-hover
 			+make-gradient(background, 87.8deg, $comb)
 	@else

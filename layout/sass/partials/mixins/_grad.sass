@@ -1,14 +1,13 @@
 =make-gradient($type, $direction, $list)
-	$type: -webkit-linear-gradient($direction, $list)
-	$type: -moz-linear-gradient($direction, $list)
-	$type: -o-linear-gradient($direction, $list)
-	$type: linear-gradient($direction, $list)
+	#{$type}: -webkit-linear-gradient($direction, $list)
+	#{$type}: -moz-linear-gradient($direction, $list)
+	#{$type}: -o-linear-gradient($direction, $list)
+	#{$type}: linear-gradient($direction, $list)
 
 =grad($text, $border)
+	+make-gradient(background, to right, $comb)
 	@if $text 
-		+make-gradient(background, left right, $comb)
 		-webkit-background-clip: text
-		background-clip: text
 		-webkit-text-fill-color: transparent
 		color: transparent
 	@if $border
