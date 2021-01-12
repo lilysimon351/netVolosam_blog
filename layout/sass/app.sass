@@ -1,42 +1,213 @@
 @import 'partials/imports'
-@import 'partials/mixins/flex'
-@import 'partials/mixins/btn'
 
 .wrapper
-	max-width: 1140px
 	width: 100%
 	margin: 0 auto
 
-/* ------ front page ------ */
 
-.title 
+/* ------ front page ------ */
+.front-page
+	+fz-small
+.title-color
+	color: #2F2F2F
+.title-fz 
 	+fz-biggest
 .cat-title
 	+fz-big
 .article-title
 	+fz-normal 
-.header
-	+d-flex
-	+justify-between
+.flex
+	+d-flex 
+
+.header, .urgent-article
 	+align-center
+.header, .cat-item, .footer-wrapper, .mixed
+	+justify-between
+.cat-bottom-left,.popular-articles, .all-articles
+	+flex-wrap
+
+.cat-item, .article-item
+	margin-bottom: 30px
+
+.show-questions, .show-more-articles
+	+btn(true, true, false)
+	width: 260px
+
+/* header */
+
+.header
 	padding: 20px 0
+	margin-bottom: 10px
 .logo-box
 	a 
 		display: inline-block
 	img
 		width: 144px
+		border-radius: 0
 .site-descr
 	display: inline-block
 	color: $descr
+	+fz-normal
 	margin:
 		left: 10px
 		right: 20px
 .header-form
+	max-width: 360px
+	width: 100%
 	input[type="search"]
-		width: 360px
+		width: 100%
 .search-btn
 	border: none
 	background: url(../images/icons/search.svg) center no-repeat
 	width: 30px
 	position: absolute
 	right: 0
+	top: 0
+
+/* top */
+
+.main-article 
+	margin: 0 30px 30px 0
+	max-width: 653px
+.main-photo
+	display: block
+	width: 100%
+	height: 368px
+	border-radius: 10px
+	overflow: hidden
+	margin-bottom: 15px
+	img
+		width: 100%
+.main-article__title, .article-short-text
+	width: 90%
+.urgent-articles-box
+	max-width: 450px
+	padding-top: 20px
+.urgent-article
+	margin-bottom: 15px
+	color: $title
+.urgent-articles__title
+	margin-bottom: 15px
+	color: $topical
+.urgent-article__img
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	margin: 0 15px 0 0
+	vertical-align: middle
+.compare
+	+fz-big
+	margin-bottom: 30px
+.compare-link
+	color: $topical
+
+/* categories */
+.cat-link, .cat-link:hover
+	color: inherit
+.cat-title
+	color: $cat
+	margin-bottom: 10px
+.cats-top .cat-title
+	+fz-big
+.cats-bottom .cat-title
+	+fz-normal
+.cat-articles-count
+	color: $cat-count
+	background: $non-akcent
+	min-width: 50px
+	padding: 2px 4px
+	text-align: center
+	margin-right: 5px
+	border-radius: 10px
+	-webkit-transition: background-color 0.25s
+	-moz-transition: background-color 0.25s
+	-o-transition: background-color 0.25s
+	transition: background-color 0.25s
+.cat-articles-count, .cat-descr
+	+fz-smaller
+	display: inline-block
+.cat-link:hover .cat-articles-count
+	background: $akcent
+.cat-img
+	width: 60px
+@media screen and (min-width: 1200px)
+	.cat-img
+		margin-right: 0
+
+.cat-extra-img-box
+	border-radius: 10px
+	background: url(../images/legs.png) center no-repeat
+	background-size: cover
+	width: 260px
+	height: 170px
+	-ms-flex-negative: 0
+	flex-shrink: 0
+
+/* popular articles */
+
+.popular-articles-box
+
+.article-item
+	width: 360px
+	h3 
+		margin-bottom: 10px
+.img-box
+	width: 100%
+	overflow: hidden
+	border-radius: 10px
+	margin-bottom: 20px
+.cat
+	margin-bottom: 10px
+	a:before 
+		content: url(../images/icons/bookmark.svg)
+		display: inline-block
+		margin-right: 10px
+		vertical-align: middle
+
+/* question */
+.ques-box
+	padding-bottom: 30px
+	margin-bottom: 30px
+.ques-left
+	height: 265px
+	width: 100%
+	background: url(../images/fp-ques.png) center no-repeat
+	background-size: cover
+	border-radius: 10px
+		
+.ques-right
+	+fz-normal
+	h2 
+		+fz-big
+
+/* all articles */
+.all-articles-box
+	padding-bottom: 30px
+.article-item .img-box
+	overflow: hidden
+	border-radius: 10px
+.show-more-articles
+	display: block 
+	margin: 30px auto
+
+/* footer */
+.footer
+	background: #E0EBFF
+	padding: 25px 0 15px 0
+.footer-wrapper
+	+align-center
+.footer-email, .menu
+	+fz-smaller
+.menu a 
+	display: block
+	margin-bottom: 10px
+	text-decoration: underline
+.footer-email .top
+	font-weight: bold
+.footer-descr
+	+fz-normal
+	line-height: 25px
+.footer-mail
+	font-weight: normal
+	text-decoration: underline
+	cursor: pointer
