@@ -78,6 +78,15 @@
 	/* single question */
 	.go-to-ques
 		margin: 30px auto
+
+	/* 404 */
+	.go-to-home, .go-to-ques-page
+		max-width: 360px
+		width: 100%
+		display: block
+		margin: 0 auto 10px
+
+
 @media screen and (max-width: 724px)
 	.header
 		+flex-column
@@ -95,7 +104,7 @@
 	ul	li
 		&:before 
 			display: block
-	.read-also, .comment-input-box
+	.read-also, .comment-input-box, .what-to-do
 		+flex-column
 	.comment-form__input
 		width: 100%
@@ -115,6 +124,7 @@
 	.comment-time
 		width: 100%
 		margin-bottom: 20px
+
 @media screen and (min-width: 725px)
 	.wrapper
 		max-width: 100%
@@ -203,6 +213,10 @@
 		&:after
 			left: 90%
 			top: calc(50% - 16px)
+
+	/* 404 */
+	.go-to-home
+		margin-right: 10px
 
 @media screen and (min-width: 819px)
 	/* questions */
@@ -309,6 +323,14 @@
 	/* single question */
 	.go-to-ques
 		margin: 30px 0
+
+	/* 404 */
+	.go-to-home, .go-to-ques-page
+		max-width: 260px
+		margin: 0 auto
+	.what-to-do
+		width: 580px
+		margin: 0 auto
 
 @media screen and (min-width: 1170px)
 	.wrapper
