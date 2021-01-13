@@ -3,7 +3,7 @@
 	.wrapper
 		padding: 0 15px
 		max-width: 530px
-	.mixed, .cats-box, .popular-articles
+	.mixed, .cats-box, .popular-articles, .commentmetadata
 		+flex-wrap
 	.logo-box, .footer .logo-box, .footer-email, .menu
 		width: unset
@@ -47,6 +47,17 @@
 	.footer-mail
 		display: block
 		text-align: center
+
+	/* article */
+	.article-page
+		font-size: 22px
+		line-height: 26.4px
+	.comment-author
+		position: absolute
+		top: 0 
+		left: 0
+
+
 @media screen and (max-width: 724px)
 	.header
 		+flex-column
@@ -59,6 +70,31 @@
 	.header-form 
 		input
 			height: 57px
+
+	/* article */
+	ul	li
+		&:before 
+			display: block
+	.read-also, .comment-input-box
+		+flex-column
+	.comment-form__input
+		width: 100%
+	.commenter-name, .comment-time
+		+order(-1)
+	.reply
+		position: absolute
+		bottom: -30px
+		right: 0
+	.commentmetadata
+		margin-bottom: 60px
+	.commenter-name,.comment-time
+		display: block
+		padding-left: 100px
+	.commenter-name
+		margin: 15px 0 10px
+	.comment-time
+		width: 100%
+		margin-bottom: 20px
 @media screen and (min-width: 725px)
 	.wrapper
 		max-width: 100%
@@ -94,6 +130,31 @@
 		max-width: 100%
 	.footer .logo-box
 		text-align: center
+
+	/* article */
+	.content-grad
+		right: 15px
+	.ra-article
+		width: 48%
+	.ra-article__img-box
+		height: 164px
+		overflow: hidden
+		border-radius: 10px
+		margin-bottom: 30px
+	.ra-article__title
+	.submit-grad
+		width: 283px
+	.comment-form__input
+		width: 50%
+	.comment-input-box input[type="text"]
+		margin-right: 8px
+	.commentmetadata
+		padding-left: 110px 
+	.comment-time
+		margin-right: 20px
+	.comments-box
+		max-width: 650px
+
 @media screen and (max-width: 919px)
 	.all-articles
 		&:nth-child(2n)
@@ -110,6 +171,32 @@
 			+order(3)
 		.footer-email
 			+order(2)
+
+	/* article */
+	.d-none
+		display: none!important
+	.content-hidden
+		max-width: 400px
+		width: 100%
+		height: 100%
+		padding: 40px 15px 15px
+		border-radius: 10px
+		background: #ffffff
+		position: fixed
+		right: 0
+		bottom: 0
+		z-index: 3
+	.content-btn
+		+btn(true, true, false)
+		padding: 5px
+		+fz-smaller
+	.content-close-btn
+		background: url(../images/icons/close.png) center no-repeat
+		width: 20px
+		height: 20px
+		position: absolute
+		right: 15px
+		top: 10px
 
 @media screen and (min-width: 920px)
 
@@ -137,6 +224,24 @@
 		max-width: 653px
 	.ques-right
 		padding-top: 20px
+
+	/* article */
+	.content-grad, .content-close-btn
+		display: none
+	.article-box
+		+d-flex
+	.content-hidden
+		width: 360px
+		padding-top: 30px
+		margin-left: 30px
+	.article-bottom, .article
+		max-width: 750px
+	.comment-form-box
+		width: 557px
+	.comment-input-box input[type="text"]
+		width: 235px
+	.comment-input-box input[type="email"]
+		width: 100%
 
 @media screen and (min-width: 1170px)
 	.wrapper
