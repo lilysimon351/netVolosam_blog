@@ -3,20 +3,19 @@
 		&
 			color: inherit
 		& li::before 
-			content: url(../../images/icons/legs.svg)
-			margin-right: 15px
+			content: url(images/icons/legs.svg)
+			margin-right: 20px
 	@else if ($type == 'grad')
-		& li::before
+		&
 			+grad(true, false)
 	@else
 		&	
 			color: inherit
-	@if($type != 'leg')
-		&
-			counter-reset: section	
+			counter-reset: section
 		& li::before
 			counter-increment: section
 			content: counters(section, '.')
-			margin-right: 10px
+			margin-right: 20px
+			margin-right: 15px
 
 

@@ -4,6 +4,7 @@
 	width: 100%
 	margin: 0 auto
 
+
 /* ------ front page ------ */
 .front-page
 	+fz-small
@@ -18,9 +19,9 @@
 .flex
 	+d-flex 
 
-.header, .urgent-article, .commentmetadata 
+.header, .urgent-article
 	+align-center
-.header, .cat-item, .footer-wrapper, .mixed, .read-also
+.header, .cat-item, .footer-wrapper, .mixed
 	+justify-between
 .cat-bottom-left,.popular-articles, .all-articles
 	+flex-wrap
@@ -31,22 +32,6 @@
 .show-questions, .show-more-articles
 	+btn(true, true, false)
 	width: 260px
-.front-page img
-	margin-bottom: 0
-
-.grad-btn-box
-	text-align: center
-	border: double 1px transparent
-	border-radius: 10px
-	background-image: linear-gradient(white, white), radial-gradient(circle at top left, $comb)
-	background-origin: border-box
-	background-clip: content-box, border-box
-	input
-		width: 100%
-		border: none
-	&:hover
-		background: white
-
 
 /* header */
 
@@ -59,7 +44,6 @@
 	img
 		width: 144px
 		border-radius: 0
-		margin-bottom: 0
 .site-descr
 	display: inline-block
 	color: $descr
@@ -227,123 +211,3 @@
 	font-weight: normal
 	text-decoration: underline
 	cursor: pointer
-
-/* article */
-.article
-	margin: 10px 0 30px
-
-	h3 
-		padding-left: 25px
-.content-menu li
-	+fz-small
-.contra
-	padding: 10px 10px 10px 30px
-	font-weight: bold
-	margin: 25px 0
-	&:before
-		content: ""
-		position: absolute
-		left: 0
-		top: 0
-		width: 12px
-		height: 100%
-		border-radius: 10px
-		+make-gradient(background, 180deg, (#FFBFBF 0%, #FF7272 100%))
-.know
-	padding: 55px 20px 20px 40px
-	margin-bottom: 25px
-	font-weight: bold
-	border-radius: 10px
-	+make-gradient(background, 86.6deg, (#D3D2FF -8.73%, rgba(211, 210, 255, 0.42) 98.7%, rgba(211, 210, 255, 0.04) 102.77%))
-	&:before
-		content: url(../images/icons/quots.png)
-		font-size: 50px
-		position: absolute
-		left: 40px
-		top: 10px
-		color: black
-.read-also-box
-	margin-bottom: 30px
-.read-also__title, .in-cats__title, .comment-form__title
-	+fz-bigger
-	margin-bottom: 20px
-.ra-article__img-box
-	display: block
-.in-cats
-	margin-bottom: 40px
-.in-cat__link
-	+grad(true, false)
-	margin-right: 30px
-	display: inline-block
-
-
-/* content */
-.content-title
-	font-weight: bold
-	margin-bottom: 20px
-.content-grad
-	width: 153px
-	position: fixed
-	bottom: 26px
-	right: 5px
-	z-index: 2
-.content-menu
-	+fz-small
-	margin-top: 0
-.content-menu-box::-webkit-scrollbar
-	width: 5px
-.content-menu-box::-webkit-scrollbar-thumb
-	background: $non-akcent
-	border-radius: 10px
-.content-menu-box::-webkit-scrollbar-track
-	background: #f1f1f1
-.content-menu-box
-	overflow-y: auto
-	height: 90%
-	padding-bottom: 30px
-
-/* comment */
-.comment-form__submit
-	+btn(true, true, false)
-	color: white
-.comment-body
-	margin-bottom: 30px
-.avatar
-	width: 80px
-	height: 80px
-	margin-bottom: 0
-.comment-reply-link
-	display: inline-block
-	color: black
-	+fz-smaller
-	padding: 5px
-	width: 108px
-	border: 1px solid $non-akcent
-	border-radius: 10px
-	text-align: center
-.commenter-name
-	+fz-small
-	margin-bottom: 10px
-.comment-time
-	+fz-smaller
-.comment-text
-	margin-bottom: 15px
-	color: $title
-		
-.comment .children
-	margin-left: 30px
-.child .commenter-name
-	&:after
-		content: url(../images/icons/answer.svg)
-		display: inline-block
-		margin-left: 5px
-.comment-form-box
-	margin-bottom: 60px
-	textarea
-		display: block
-		width: 100%
-		margin-bottom: 15px
-.comment-form__input
-	margin-bottom: 10px
-.comments-box
-	margin-bottom: 60px

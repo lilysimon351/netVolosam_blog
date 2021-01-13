@@ -3,17 +3,16 @@
 	+fz-small
 	outline-offset: 0
 	outline: none
-	border-radius: 10px
 
 	@if $is-grad 		
 		+grad($is-grad-text, $is-grad-border)
 		&:hover
-			-webkit-text-fill-color: white
-			color: white
+			-webkit-text-fill-color: $btn-hover
+			color: $btn-hover
 			+make-gradient(background, 87.8deg, $comb)
 	@else
 		border: 1px solid $non-akcent
-		color: $text
+		color: $text 
 		&:hover
 			background: $non-akcent
 			color: white
