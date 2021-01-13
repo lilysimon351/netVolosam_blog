@@ -57,6 +57,26 @@
 		top: 0 
 		left: 0
 
+	/* questions */
+	.banner-box
+		background-size: auto 217px
+		background-position: center bottom
+	.banner
+		padding: 30px 0 220px
+	.forms
+		padding: 35px 0
+	.ques-search-form
+		margin-bottom: 30px
+	.ask-ques-form
+		input, textarea
+			width: 100%
+	.ques-answer 
+		margin-top: 30px
+		div
+			padding: 10px 20px 
+	.ques-link
+		padding: 15px 20px 50px 
+
 
 @media screen and (max-width: 724px)
 	.header
@@ -155,6 +175,40 @@
 	.comments-box
 		max-width: 650px
 
+	/* questions */
+	.banner-box
+		background-size: auto 95%
+		background-position: 95% bottom
+	.banner
+		padding: 50px 0
+		width: 50%
+	.banner__title 
+		width: 295px
+	.ques-search-form
+		width: 486px
+		margin-left: auto
+		margin-right: auto
+	.ask-ques-form
+		.ask-ques-email, .ques-answer-btn
+			width: 230px
+	.ques-answer 
+		position: fixed
+		bottom: 60px
+		right: 20px
+		z-index: 2
+		width: 300px
+	.ques-link
+		max-width: 945px
+		padding: 15px 15% 15px 30px
+		&:after
+			left: 90%
+			top: calc(50% - 16px)
+
+@media screen and (min-width: 819px)
+	/* questions */
+	.ask-ques-form
+		max-width: 731px
+
 @media screen and (max-width: 919px)
 	.all-articles
 		&:nth-child(2n)
@@ -242,6 +296,14 @@
 		width: 235px
 	.comment-input-box input[type="email"]
 		width: 100%
+
+	/* questions */
+	.ques-link
+		padding: 15px 17% 15px 100px
+		&:after 
+			left: 87%
+	.ques-answer
+		width: 262px
 
 @media screen and (min-width: 1170px)
 	.wrapper

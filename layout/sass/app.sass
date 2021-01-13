@@ -28,7 +28,7 @@
 .cat-item, .article-item
 	margin-bottom: 30px
 
-.show-questions, .show-more-articles
+.show-questions, .show-more-articles, .show-more-ques
 	+btn(true, true, false)
 	width: 260px
 .front-page img
@@ -44,7 +44,7 @@
 	input
 		width: 100%
 		border: none
-	&:hover
+	&:not(.ques-search-btn):not(.ques-answer):hover
 		background: white
 
 
@@ -72,7 +72,7 @@
 	width: 100%
 	input[type="search"]
 		width: 100%
-.search-btn
+.search-btn, .ques-search__submit
 	border: none
 	background: url(../images/icons/search.svg) center no-repeat
 	width: 30px
@@ -202,7 +202,7 @@
 .article-item .img-box
 	overflow: hidden
 	border-radius: 10px
-.show-more-articles
+.show-more-articles, .show-more-ques
 	display: block 
 	margin: 30px auto
 
@@ -347,3 +347,37 @@
 	margin-bottom: 10px
 .comments-box
 	margin-bottom: 60px
+
+/* questions */
+.banner-box
+	background: $non-akcent url(../images/ques-bg.png) center no-repeat
+.banner__title
+	margin-bottom: 10px
+.ques-search__submit
+	background: url(../images/icons/search-grad.svg) center no-repeat
+.ask-ques-form
+	margin: 0 auto
+	input:not(.ask-ques-submit), textarea
+		display: block
+		margin-bottom: 10px
+.ask-ques-submit
+	+btn(true, true, false)
+
+.ques-answer
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36)
+	+fz-small
+	text-align: left
+.ques-link-box
+	margin-bottom: 60px
+.ques-link
+	display: block
+	margin: 0 auto 20px
+	background: #E0EBFF
+	color: $title
+	border-radius: 10px
+	&:after
+		content: url(../images/icons/more.svg)
+		position: absolute
+		bottom: 15px
+		left: calc(50% - 20px)
+		
