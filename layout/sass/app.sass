@@ -3,7 +3,7 @@
 .wrapper
 	width: 100%
 	margin: 0 auto
-.article a, .ques-content a 
+.article a, .ques-content a
 	color: $link
 /* ------ front page ------ */
 .front-page
@@ -29,7 +29,7 @@
 .cat-item, .article-item
 	margin-bottom: 30px
 
-.show-questions, .show-more-articles, .show-more-ques
+.show-questions, .show-more-articles, .show-more-ques, .show-more-cat-articles
 	+btn(true, true, false)
 	width: 260px
 .front-page img
@@ -396,3 +396,10 @@
 	div
 		width: 100%
 		+btn(true, true, false)
+
+/* category page */
+.categories-box
+	margin: 30px 0 60px
+.show-more-cat-articles
+	display: block
+	margin: 0 auto 30px
