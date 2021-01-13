@@ -31,11 +31,41 @@
 		<section class="banner-box">
 			<div class="wrapper">
 				<div class="banner">
-					<h1 class="banner__title title-fz">Вы спрашиваете - мы отвечаем</h1>
+					<h1 class="banner__title title-fz"><span class="typing"></span> - мы отвечаем</h1>
 					<p class="banner__text">Здесь мы собрали вопросы от наших пользователей, если вы не нашли свой вопрос, вы всегда его можете написать</p>
 				</div>
 			</div>
 		</section>
+		<script>
+			const text = [
+			  'Вы спрашиваете'
+			];
+
+			 let line = 0;
+			  let count = 0;
+			  let result = '';
+			  function typeLine() {
+			    let interval = setTimeout(
+			      () => {
+			        result += text[line][count]
+			        document.querySelector('.typing').innerHTML =result +'|';
+
+
+			      count++;
+			      if (count >= text[line].length) {
+			        count = 0;
+			        line++;
+			        if (line == text.length) {
+			          clearTimeout(interval);
+			           document.querySelector('.typing').innerHTML =result;
+			          return true;
+			        }
+			      }
+			      typeLine();
+			    }, 250)
+			  }
+			  typeLine();
+		</script>
 		<div class="forms">
 			<div class="wrapper">
 				<form action="" class="ques-search-form">
