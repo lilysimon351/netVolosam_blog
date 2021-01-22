@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="css/base/basic.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/media.css">
+	<script src="scripts/objectFitPolyfill.min.js"></script>
+	<script src="scripts/app.js"></script>
 </head>
 <body>
 	<div class="questions-page">
@@ -31,41 +33,11 @@
 		<section class="banner-box">
 			<div class="wrapper">
 				<div class="banner">
-					<h1 class="banner__title title-fz"><span class="typing"></span> - мы отвечаем</h1>
+					<h1 class="banner__title title-fz"><span class="typing">Вы спрашиваете</span> - мы отвечаем</h1>
 					<p class="banner__text">Здесь мы собрали вопросы от наших пользователей, если вы не нашли свой вопрос, вы всегда его можете написать</p>
 				</div>
 			</div>
 		</section>
-		<script>
-			const text = [
-			  'Вы спрашиваете'
-			];
-
-			 let line = 0;
-			  let count = 0;
-			  let result = '';
-			  function typeLine() {
-			    let interval = setTimeout(
-			      () => {
-			        result += text[line][count]
-			        document.querySelector('.typing').innerHTML =result +'|';
-
-
-			      count++;
-			      if (count >= text[line].length) {
-			        count = 0;
-			        line++;
-			        if (line == text.length) {
-			          clearTimeout(interval);
-			           document.querySelector('.typing').innerHTML =result;
-			          return true;
-			        }
-			      }
-			      typeLine();
-			    }, 250)
-			  }
-			  typeLine();
-		</script>
 		<div class="forms">
 			<div class="wrapper">
 				<form action="" class="ques-search-form">
@@ -78,9 +50,9 @@
 					<input type="email" placeholder="Введите ваш Email..." class="ask-ques-email">
 					<input type="text" placeholder="Краткий вопрос по существу..." class="ask-ques-title">
 					<textarea rows="4" placeholder="Описание вопроса, если оно требуется" class="ask-ques-content"></textarea>
-					<div class="grad-btn-box ques-answer-btn">
-						<input type="submit" value="Задать вопрос" class="ask-ques-submit">
-					</div>
+					<button type="submit" class="ask-ques-submit grad-btn-box ques-answer-btn">
+						<span>Задать вопрос</span>
+					</button>
 					<div class="ques-answer grad-btn-box">
 						<div>Ваш вопрос отправлен, мы ответим в ближайщее время и продублируем ответ на Email</div>
 					</div>
@@ -99,7 +71,7 @@
 					<a href="single-question.html" class="ques-link">Чем отличается эпиляция от депиляции?</a>
 					<a href="single-question.html" class="ques-link">Чем отличается эпиляция от депиляции?</a>
 				</div>
-				<button class="show-more-ques">Посмотреть еще вопросы</button>
+				<button class="show-more-ques"><span>Посмотреть еще вопросы</span></button>
 			</div>
 		</section>
 		<footer class="footer">

@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="css/base/basic.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/media.css">
+	<script src="scripts/objectFitPolyfill.min.js"></script>
+	<script src="scripts/app.js"></script>
 </head>
 <body>
 	<div class="single-question-page">
@@ -31,7 +33,7 @@
 		<section class="banner-box">
 			<div class="wrapper">
 				<div class="banner">
-					<div class="banner__title title-fz title-color">Вы спрашиваете - мы отвечаем</div>
+					<div class="banner__title title-fz title-color"><span class="typing">Вы спрашиваете</span> - мы отвечаем</div>
 					<p class="banner__text">Здесь мы собрали вопросы от наших пользователей, если вы не нашли свой вопрос, вы всегда его можете написать</p>
 				</div>
 			</div>
@@ -48,9 +50,9 @@
 					<input type="email" placeholder="Введите ваш Email..." class="ask-ques-email">
 					<input type="text" placeholder="Краткий вопрос по существу..." class="ask-ques-title">
 					<textarea rows="4" placeholder="Описание вопроса, если оно требуется" class="ask-ques-content"></textarea>
-					<div class="grad-btn-box ques-answer-btn">
-						<input type="submit" value="Задать вопрос" class="ask-ques-submit">
-					</div>
+						<button type="submit" class="ask-ques-submit grad-btn-box ques-answer-btn">
+							<span>Задать вопрос</span>
+						</button>
 					<div class="ques-answer grad-btn-box">
 						<div>Ваш вопрос отправлен, мы ответим в ближайщее время и продублируем ответ на Email</div>
 					</div>
@@ -68,7 +70,7 @@
 					</article>
 
 					<a href="questions.html"class="go-to-ques grad-btn-box">
-						<div  type="button">Перейти ко всем вопросам</div>
+						<span>Перейти ко всем вопросам</span>
 					</a>
 				</div>
 
@@ -108,6 +110,5 @@
 			</div>
 		</footer>
 	</div>
-
 </body>
 </html>
