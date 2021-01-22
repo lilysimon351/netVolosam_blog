@@ -7,6 +7,14 @@
 	src: url('../../fonts/FuturaPT-Book.ttf') format('truetype')
 	font-weight: 300
 	font-style: normal
+@font-face
+	font-family: 'Futura PT Medium'
+	src: local('Futura PT Medium'), local('Futura PT Medium')
+	src: url('../../fonts/FuturaPT-Medium.woff2') format('woff2')
+	src: url('../../fonts/FuturaPT-Medium.woff') format('woff')
+	src: url('../../fonts/FuturaPT-Medium.ttf') format('truetype')
+	font-weight: 450
+	font-style: normal
 
 *
 	-webkit-box-sizing: border-box
@@ -25,11 +33,9 @@ body
 article, aside, blockquote, canvas, fieldset, figure, iframe, p, pre, table, video, audio, h1, h2, h3, h4, h5, h6
 	margin: 0
 	margin-bottom: 25px
+a, h1, h3
+	+simple-transition()
 a
-	-webkit-transition: color 0.25s
-	-moz-transition: color 0.25s
-	-o-transition: color 0.25s
-	transition: color 0.25s
 	color: inherit
 	font-size: inherit
 	text-decoration: none
@@ -82,6 +88,8 @@ textarea
 input[type="search"]
 	border: 1px solid #9b9b9b
 	padding-right: 40px
+	+placeholder
+		font-family: "Futura PT Medium"
 input[type="submit"]
 	cursor: pointer
 input[type="search"]::-webkit-search-cancel-button,
@@ -90,10 +98,13 @@ input[type="search"]:focus::-webkit-search-cancel-button
 button, [type=button]
 	background: none
 	display: inline-block
-	padding: 10px 20px
 	border: 1px solid $non-akcent
 	border-radius: 10px
 	text-align: center
+	min-height: 47px
+	color: inherit
+	&
+		padding: 10px 20px
 table
 	width: 100%
 table, tr, td, th, caption

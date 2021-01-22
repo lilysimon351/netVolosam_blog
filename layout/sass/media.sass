@@ -7,17 +7,17 @@
 		+flex-wrap
 	.logo-box, .footer .logo-box, .footer-email, .menu
 		width: unset
-	.main-photo, .article-item .img-box
-		height: unset
 	.main-article__title, .article-short-text,  .footer .logo-box, .footer-email, .menu
 		width: 100%
 	.header, .cats-top, .cats-box
 		margin-bottom: 0
-	.logo-box, .footer-email, .menu
+	.logo-box, .footer-email, .menu, .all-articles .cat, .article-item__text
 		text-align: center
 	.show-questions, .show-more-articles
 		max-width: 290px
 		width: 100%
+	.cats-top-col, .cat-bottom-col
+		+col(1)
 	.site-descr
 		display: block
 		margin: 0 auto 20px auto
@@ -38,6 +38,15 @@
 			margin-bottom: 10px
 		p
 			margin-bottom: 25px
+	.all-articles .img-box, 
+	.ra-article__img-box
+		height: 165px
+	.popular-articles .img-box
+		height: 196px
+	.main-photo .img-box
+		height: 211px
+	.content-grad
+		width: 153px
 	.footer-wrapper
 		max-width: 485px
 		margin: 0 auto
@@ -49,9 +58,17 @@
 		text-align: center
 
 	/* article */
-	.article-page
+	.popular-article-col
+		+col(1)
+	.article-page,
+	.popular-articles h3 
 		font-size: 22px
 		line-height: 26.4px
+
+	.popular-articles h3 
+		font-family: 'Futura PT Medium'
+	.article-photo
+		height: 144px
 	.comment-author
 		position: absolute
 		top: 0 
@@ -90,11 +107,9 @@
 @media screen and (max-width: 724px)
 	.header
 		+flex-column
-	.cat-item, .article-item, .all-articles-box .article-item, .main-article
+	.main-article
 		margin-right: 0
-	.cat-item, .article-item, .all-articles-box .article-item
-		width: 100%
-	.cats-top
+	.cats-top-item-row
 		+flex-wrap
 	.header-form 
 		input
@@ -124,10 +139,16 @@
 	.comment-time
 		width: 100%
 		margin-bottom: 20px
+	.in-cat__link
+		margin-bottom: 15px
 
 @media screen and (min-width: 725px)
 	.wrapper
 		max-width: 100%
+	.all-articles-col
+		+col(2)
+	.cats-top-col, .cat-bottom-col
+		+col(3)
 	.logo-box
 		text-align: left
 	.site-descr
@@ -136,42 +157,39 @@
 		width: 48%
 	.urgent-articles-box
 		max-width: 46%
-	.cat-item, .article-item
-		margin-right: 20px
-		width: 31%
-		margin-bottom: 30px
-		&:nth-child(3n)
-			margin-right: 0
 	.ques-left
 		background-size: contain
 		width: 100%
 	.ques-right
 		margin: 0 auto
 		width: 600px
-	.img-box
-		height: 196px
+	.popular-article-col
+		+col(2)
+	.popular-articles h3 
+		font-family: 'Futura PT'
+	.main-photo .img-box
+		height: 259px
 	.all-articles
 		+justify-between
-		.article-item
-			width: 47%
-		.img-box
-			height: 165px
 	.footer .form 
 		max-width: 100%
 	.footer .logo-box
 		text-align: center
 
 	/* article */
+	.article-page
+	.content-grad
+		width: 210px
+		+fz-normal
+	.article-photo
+		height: 369px
 	.content-grad
 		right: 15px
 	.ra-article
 		width: 48%
 	.ra-article__img-box
-		height: 164px
-		overflow: hidden
 		border-radius: 10px
 		margin-bottom: 30px
-	.ra-article__title
 	.submit-grad
 		width: 283px
 	.comment-form__input
@@ -198,9 +216,10 @@
 		width: 486px
 		margin-left: auto
 		margin-right: auto
-	.ask-ques-form
-		.ask-ques-email, .ques-answer-btn
-			width: 230px
+	.ask-ques-form .ask-ques-email
+		width: 357px
+	.ask-ques-form .ques-answer-btn
+		width: 230px
 	.ques-answer 
 		position: fixed
 		bottom: 60px
@@ -213,6 +232,9 @@
 		&:after
 			left: 90%
 			top: calc(50% - 16px)
+	.go-to-ques
+		width: 389px
+		margin: 0
 
 	/* 404 */
 	.go-to-home
@@ -235,7 +257,9 @@
 	.footer
 		.form
 			+order(1)
-			margin: 20px auto 
+			margin: 20px auto
+			width: 100%
+			max-width: 486px
 		.menu
 			+order(3)
 		.footer-email
@@ -248,7 +272,7 @@
 		max-width: 400px
 		width: 100%
 		height: 100%
-		padding: 40px 15px 15px
+		padding: 40px 20px 15px
 		border-radius: 10px
 		background: #ffffff
 		position: fixed
@@ -257,8 +281,9 @@
 		z-index: 3
 	.content-btn
 		+btn(true, true, false)
-		padding: 5px
 		+fz-smaller
+		width: 100%
+
 	.content-close-btn
 		background: url(../images/icons/close.png) center no-repeat
 		width: 20px
@@ -266,18 +291,22 @@
 		position: absolute
 		right: 15px
 		top: 10px
+		cursor: pointer
 
 @media screen and (min-width: 920px)
+	.all-articles-col, .popular-article-col
+		+col(3)
+	.popular-articles h3 
+		+fz-normal
+	.all-articles .cat, .article-item__text
+		text-align: left
 
-	.all-articles-box .article-item
-		width: 255px
-		margin-right: 30px
-		&:nth-child(4n)
-			margin-right: 0
+	/* footer */
 	.footer-wrapper
 		max-width: 100%
 	.footer .logo-box
 		width: 165px
+	.footer .logo-box, .footer-email, .menu, .footer-mail
 		text-align: left
 	.footer-email, .menu
 		width: 260px
@@ -288,6 +317,7 @@
 	.footer .logo-box
 		-ms-flex-negative: 0
 		flex-shrink: 0
+	/* question */
 	.ques-left
 		margin-right: 30px
 		max-width: 653px
@@ -295,14 +325,24 @@
 		padding-top: 20px
 
 	/* article */
+	.article-photo
+		height: 375px
 	.content-grad, .content-close-btn
 		display: none
 	.article-box
 		+d-flex
-	.content-hidden
+	.content
 		width: 360px
 		padding-top: 30px
 		margin-left: 30px
+		-ms-flex-negative: 0
+		flex-shrink: 0
+	.sticky-content 
+		.content-hidden
+			position: fixed
+			top: 30px
+			height: 400px
+			width: 360px
 	.article-bottom, .article
 		max-width: 750px
 	.comment-form-box
@@ -332,33 +372,6 @@
 		width: 580px
 		margin: 0 auto
 
-@media screen and (min-width: 1170px)
-	.wrapper
-		max-width: 1140px
-		padding: 0
-	.footer-mail
-		display: initial
-	.ques-right
-		text-align: left
-		padding-top: 60px
-		h2, p 
-			margin-bottom: 10px
-	.cats-top, .cats-box
-		margin-bottom: 30px
-	.cat-item, .article-item
-		margin-right: 30px
-		&:nth-child(3n)
-			margin-right: 0
-
-	/* questions */
-	.banner
-		padding: 143px 0 143px 100px
-	.banner__title	
-		width: unset
-	.banner__text
-		width: 457px
-
-
 @media screen and (max-width: 1169px)
 	.cat-left
 		text-align: center
@@ -369,3 +382,33 @@
 		display: none
 	.cats-bottom
 		+flex-wrap
+
+@media screen and (min-width: 1170px)
+	.wrapper
+		max-width: 1140px
+		padding: 0
+	.all-articles-col
+		+col(4)
+	.main-photo .img-box
+		height: 368px
+	.footer-mail
+		display: initial
+	.ques-right
+		text-align: left
+		padding-top: 60px
+		h2, p 
+			margin-bottom: 10px
+	.cats-top, .cats-box
+		margin-bottom: 30px
+	.cat-img
+		margin-right: 0
+		margin-left: 10px 
+
+	/* questions */
+	.banner
+		padding: 140px 0 140px 100px
+	.banner__title	
+		width: unset
+	.banner__text
+		width: 457px
+

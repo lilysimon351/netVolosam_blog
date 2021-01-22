@@ -3,17 +3,13 @@
 	#{$type}: -moz-linear-gradient($direction, $list)
 	#{$type}: -o-linear-gradient($direction, $list)
 	#{$type}: linear-gradient($direction, $list)
-
-=grad($text, $border)
+=grad-text	
 	+make-gradient(background, to right, $comb)
-	@if $text 
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		color: transparent
-	@if $border
-		border: 1px solid transparent
-		// border-radius: 10px
-		// +make-gradient(border-image, 87.8deg, $comb)
-		// border-image-slice: 1
-		// border-image-repeat: round
-		
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+
+=simple-transition($param: all, $sec: .25s, $anim: ease-in-out)
+	-webkit-transition: $param $sec $anim
+	-o-transition: $param $sec $anim
+	-moz-transition: $param $sec $anim
+	transition: $param $sec $anim
