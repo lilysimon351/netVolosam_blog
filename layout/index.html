@@ -8,11 +8,14 @@
 	<link rel="stylesheet" href="css/base/normalize.css">
 	<link rel="stylesheet" href="css/base/basic.css">
 	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/media.css">
+	<script src="scripts/objectFitPolyfill.min.js"></script>
+	<script src="scripts/app.js"></script>
 </head>
 <body>
 	<div class="front-page">
 		<div class="wrapper">
-			<header class="header">
+			<header class="header flex">
 				<div class="logo-box">
 					<a href="index.html">
 						<img src="images/logo.svg" alt="нет волосам">
@@ -26,264 +29,379 @@
 					</form>
 				</div>
 			</header>
-			<section class="mixed">
+			<section class="mixed flex">
 				<div class="main-article">
-					<div class="main-photo">
-						<img src="images/main.png" alt="нет волосам">
-					</div>
-					<h1 class="main-article__title"><a href="article.html">Эпиляция и депиляция: что это и в чем отличия</a></h1>
+					<a href="article.html" class="main-photo">
+						<div class="img-box">
+							<img src="images/main.png" alt="нет волосам">
+						</div>
+					
+						<h1 class="main-article__title title-fz">Эпиляция и депиляция: что это и в чем отличия</h1>
+					</a>
 					<p class="article-short-text">Для современной барышни процедура удаления нежелательных волос является привычной и регулярной. При этом способов удаления волосяного покрова большое множество: при помощи бритвы, кремов, воска и сахара, а также с использованием специальной аппаратуры...</p>
 				</div>
 				<div class="urgent-articles-box">
-					<div class="title">Актуальные статьи</div>
+					<div class="urgent-articles__title article-title">Актуальные статьи</div>
 					<div class="urgent-articles">
-						<div class="urgent-article">
-							<img src="images/main.png" alt="" class="urgent-article__img">
-							<a href="article.html">Паста для шугаринга: основы правильного выбора</a>
-						</div>
+						
+							<a href="article.html" class="urgent-article flex">
+								<span class="urgent-article__img-box">
+									<img src="images/main.png" alt="" class="urgent-article__img">
+								</span>
+								
+								<span>
+								Паста для шугаринга: основы правильного выбора
+								</span>
+							</a>
 
-						<div class="urgent-article">
-							<img src="images/main.png" alt="" class="urgent-article__img">
-							<a href="article.html">Фотоэпиляторы для домашнего использования: особенности, виды и стоимость приборов</a>
-						</div>
+						
+							<a href="article.html" class="urgent-article flex">
+								<span class="urgent-article__img-box">
+									<img src="images/main.png" alt="" class="urgent-article__img">
+								</span>
+								<span>
+								Фотоэпиляторы для домашнего использования: особенности, виды и стоимость приборов
+								</span>
+							</a>
 
-						<div class="urgent-article">
-							<img src="images/main.png" alt="" class="urgent-article__img">
-							<a href="article.html">Лазерная эпиляция или шугаринг: как сделать выбор между современной технологией и известным методом депиляции.</a>
-						</div>
+						
+							<a href="article.html" class="urgent-article flex">
+								<span class="urgent-article__img-box">
+									<img src="images/main.png" alt="" class="urgent-article__img">
+								</span>
+								<span>
+								Лазерная эпиляция или шугаринг: как сделать выбор между современной технологией и известным методом депиляции.
+								</span>
+							</a>
 
-						<div class="urgent-article">
-							<img src="images/main.png" alt="" class="urgent-article__img">
-							<a href="article.html">Шугаринг подмышек: тонкости процедуры</a>
-						</div>
+						
+							<a href="article.html" class="urgent-article flex">
+								<span class="urgent-article__img-box">
+									<img src="images/main.png" alt="" class="urgent-article__img">
+								</span>
+								<span>
+								Шугаринг подмышек: тонкости процедуры
+								</span>
+							</a>
 
-						<div class="urgent-article">
-							<img src="images/main.png" alt="" class="urgent-article__img">
-							<a href="article.html">Как избавиться от усиков: лазерная эпиляция верхней губы</a>
-						</div>
+						
+							<a href="article.html" class="urgent-article flex">
+								<span class="urgent-article__img-box">
+									<img src="images/main.png" alt="" class="urgent-article__img">
+								</span>
+								<span>
+								Как избавиться от усиков: лазерная эпиляция верхней губы
+								</span>
+							</a>
 					</div>
 				</div>
 				<div class="compare">
-					Сравнение депиляции и эпиляции <a href="" class="compare-link">читать статью</a>
+					<span class="title-color">Сравнение депиляции и эпиляции</span> <a href="" class="compare-link">читать статью</a>
 				</div>
 			</section>
 			<div class="cats-box">
 				<div class="cats-top">
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+					<div class="cats-top-item-row row flex">
+						<div class="col cats-top-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Лазерная эпиляция</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/laser-epilation.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cats-top-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Эпиляция воском</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/waxing.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cats-top-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Шугаринг</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/sugaring.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
 					</div>
 				</div>
-				<div class="cats-bottom">
-					<div class="cat-bottom-left">
-
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+				<div class="cats-bottom flex">
+					<div class="cat-bottom-left row flex">
+						<div class="col cat-bottom-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Фотоэпиляция</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/photoepilation.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cat-bottom-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">ЭЛОС эпиляция</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/elos.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cat-bottom-col">
+							
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Электроэпиляция</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/electroepilation.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cat-bottom-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Бритье</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/shaving-razor.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cat-bottom-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Депиляция кремом</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/depilatory-cream.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
-					</div>
-					<div class="cat-item">
-						<div class="cat-left">
-							<div><a href="category.html" class="cat-title">Лазерная эпиляция</a></div>
-							<span class="cat-articles-count">20</span>
-							<span class="cat-descr">Статей по теме</span>
+						<div class="col cat-bottom-col">
+							<div class="cat-item flex">
+								<div class="cat-left">
+									<a href="category.html" class="cat-link">
+										<div class="cat-title">Эпиляция нитью</div>
+										<span class="cat-articles-count">20</span>
+										<span class="cat-descr">Статей по теме</span>
+									</a>
+								</div>
+								<img src="images/icons/thread.svg" alt="" class="cat-img">
+							</div>
 						</div>
-						<img src="images/icons/shugaring.svg" alt="" class="cat-img">
 					</div>
-					</div>
-					<div class="cat-extra-img">
-						<img src="images/legs.png" alt="">
+					<div class="cat-extra-img-box">
 					</div>
 				</div>
 			</div>
 			<section class="popular-articles-box">
-				<h2 class="popular-articles-title">Популярные статьи</h2>
-				<div class="popular-articles">
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
-						</div>
-						<div class="cat">
-							Эпиляция воском
-						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-						<p>Нежелательная растительность на теле является большой проблемой для женщин. Существует много способов, позволяющих избавиться от лишних...</p>
+				<h2 class="popular-articles-title title-fz">Популярные статьи</h2>
+				<div class="popular-articles row flex">
+					<div class="col popular-article-col">
+						<article class="article-item">
+							<a href="article.html">
+								<div class="img-box">
+									<img src="images/main.png" alt="">
+								</div>
+							</a>
+							<div class="cat">
+								<a href="category.html">Эпиляция воском</a>
+							</div>
+							<h3><a href="article.html">Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</a></h3>
+							<p>Нежелательная растительность на теле является большой проблемой для женщин. Существует много способов, позволяющих избавиться от лишних...</p>
+						</article>
 					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
-						</div>
-						<div class="cat">
-							Эпиляция воском
-						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-						<p>Нежелательная растительность на теле является большой проблемой для женщин. Существует много способов, позволяющих избавиться от лишних...</p>
+					<div class="col popular-article-col">
+						<article class="article-item">
+							<a href="article.html">
+								<div class="img-box">
+									<img src="images/main.png" alt="">
+								</div>
+							</a>
+							<div class="cat">
+								<a href="category.html">Эпиляция воском</a>
+							</div>
+							<h3><a href="article.html">Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</a></h3>
+							<p>Нежелательная растительность на теле является большой проблемой для женщин. Существует много способов, позволяющих избавиться от лишних...</p>
+						</article>
 					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
-						</div>
-						<div class="cat">
-							Эпиляция воском
-						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-						<p>Нежелательная растительность на теле является большой проблемой для женщин. Существует много способов, позволяющих избавиться от лишних...</p>
+					<div class="col popular-article-col">						
+						<article class="article-item">
+							<a href="article.html">
+								<div class="img-box">
+									<img src="images/main.png" alt="">
+								</div>
+							</a>
+							<div class="cat">
+								<a href="category.html">Эпиляция воском</a>
+							</div>
+							<h3><a href="article.html">Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</a></h3>
+							<p>Нежелательная растительность на теле является большой проблемой для женщин. Существует много способов, позволяющих избавиться от лишних...</p>
+						</article>
 					</div>
 				</div>
 			</section>
-			<section class="ques-box">
+			<section class="ques-box flex">
 				<div class="ques-left">
-					<img src="images/fp-ques.png" alt="">
 				</div>
 				<div class="ques-right">
 					<h2>Задайте свой вопрос</h2>
 					<p>
-						Нашим экспертам или посмотреть какие вопросы задавали другие пользователи
+						Нашим экспертам или посмотрите какие вопросы задавали другие пользователи
 					</p>
-					<button class="show-questions">Посмотреть вопросы</button>
+					<button class="show-questions"><span>Посмотреть вопросы</span></button>
 				</div>
 			</section>
 			<section class="all-articles-box">
 				<h2>Все статьи блога</h2>
 				<div class="all-articles">
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
+					<div class="all-articles-item-row row flex">
+						<div class="col all-articles-col">							
+							<article class="article-item">
+								<a href="article.html">
+									<div class="img-box">
+										<img src="images/main.png" alt="">
+									</div>
+								
+								<div class="article-item__text">Набор для депиляции воском: лучшее решение</div>
+								</a>
+								<div class="cat">
+									<a href="category.html">Эпиляция воском</a>
+								</div>
+							</article>
 						</div>
-						<div class="cat">
-							Эпиляция воском
+						<div class="col all-articles-col">							
+							<article class="article-item">
+								<a href="article.html">
+									<div class="img-box">
+										<img src="images/main.png" alt="">
+									</div>
+								
+								<div class="article-item__text">Набор для депиляции воском: лучшее решение</div>
+								</a>
+								<div class="cat">
+									<a href="category.html">Эпиляция воском</a>
+								</div>
+							</article>
 						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
+						<div class="col all-articles-col">							
+							<article class="article-item">
+								<a href="article.html">
+									<div class="img-box">
+										<img src="images/main.png" alt="">
+									</div>
+								
+								<div class="article-item__text">Набор для депиляции воском: лучшее решение</div>
+								</a>
+								<div class="cat">
+									<a href="category.html">Эпиляция воском</a>
+								</div>
+							</article>
 						</div>
-						<div class="cat">
-							Эпиляция воском
+						<div class="col all-articles-col">							
+							<article class="article-item">
+								<a href="article.html">
+									<div class="img-box">
+										<img src="images/main.png" alt="">
+									</div>
+								
+								<div class="article-item__text">Набор для депиляции воском: лучшее решение</div>
+								</a>
+								<div class="cat">
+									<a href="category.html">Эпиляция воском</a>
+								</div>
+							</article>
 						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
+						<div class="col all-articles-col">							
+							<article class="article-item">
+								<a href="article.html">
+									<div class="img-box">
+										<img src="images/main.png" alt="">
+									</div>
+								
+								<div class="article-item__text">Набор для депиляции воском: лучшее решение</div>
+								</a>
+								<div class="cat">
+									<a href="category.html">Эпиляция воском</a>
+								</div>
+							</article>
 						</div>
-						<div class="cat">
-							Эпиляция воском
+						<div class="col all-articles-col">							
+							<article class="article-item">
+								<a href="article.html">
+									<div class="img-box">
+										<img src="images/main.png" alt="">
+									</div>
+								
+								<div class="article-item__text">Набор для депиляции воском: лучшее решение</div>
+								</a>
+								<div class="cat">
+									<a href="category.html">Эпиляция воском</a>
+								</div>
+							</article>
 						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
-						</div>
-						<div class="cat">
-							Эпиляция воском
-						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
-						</div>
-						<div class="cat">
-							Эпиляция воском
-						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
-					</div>
-					<div class="article-item">
-						<div class="img-box">
-							<img src="images/main.png" alt="">
-						</div>
-						<div class="cat">
-							Эпиляция воском
-						</div>
-						<h3>Набор для депиляции воском: лучшее решение для удаления волос в домашних условиях</h3>
 					</div>
 				</div>
-				<button class="show-more-articles">Посмотреть еще статьи</button>
+				<button class="show-more-articles"><span>Посмотреть еще статьи</span></button>
 			</section>
-			<footer class="footer">
-				<div class="logo-box">
-					<a href="index.html">
-						<img src="images/logo.svg" alt="" class="logo">
-					</a>
-					<p class="footer-descr">бархатный блог об удалении волос</p>
-				</div>
-				<div class="footer-email">
-					<div class="top">
-						Email для связи <a href="mailto:info@netvolosam.net" class="footer-mail"></a>
-					</div>
-					<div>Копирование допускается только при использовании активной ссылки на этот сайт.</div>
-				</div>
-				<div class="menu">
-					<a href="">Страница с вопросами</a>
-					<a href="">Политика конфиденциальности</a>
-					<a href="">Пользовательское соглашение</a>
-				</div>
-				<div class="form">
-					<form action="">
-						<input type="search" placeholder="Поиск по сайту">
-						<input type="submit" value="" class="search-btn">
-					</form>
-				</div>
-			</footer>
 		</div>
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer-wrapper flex">
+					
+				
+					<div class="logo-box">
+						<a href="index.html">
+							<img src="images/logo.svg" alt="" class="logo">
+						</a>
+						<p class="footer-descr">бархатный блог об удалении волос</p>
+					</div>
+					<div class="footer-email">
+						<div class="top">
+							Email для связи <span class="footer-mail">info@netvolosam.net</span>
+						</div>
+						<div class="copy-text">Копирование допускается только при использовании активной ссылки на этот сайт.</div>
+					</div>
+					<div class="menu">
+						<a href="">Страница с вопросами</a>
+						<a href="">Политика конфиденциальности</a>
+						<a href="">Пользовательское соглашение</a>
+					</div>
+					<div class="form">
+						<form action="">
+							<input type="search" placeholder="Поиск по сайту">
+							<input type="submit" value="" class="search-btn">
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
 </body>
 </html>

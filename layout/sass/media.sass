@@ -1,0 +1,414 @@
+@import 'partials/imports'
+@media screen and (min-width: 20px)
+	.wrapper
+		padding: 0 15px
+		max-width: 530px
+	.mixed, .cats-box, .popular-articles, .commentmetadata
+		+flex-wrap
+	.logo-box, .footer .logo-box, .footer-email, .menu
+		width: unset
+	.main-article__title, .article-short-text,  .footer .logo-box, .footer-email, .menu
+		width: 100%
+	.header, .cats-top, .cats-box
+		margin-bottom: 0
+	.logo-box, .footer-email, .menu, .all-articles .cat, .article-item__text
+		text-align: center
+	.show-questions, .show-more-articles
+		max-width: 290px
+		width: 100%
+	.cats-top-col, .cat-bottom-col
+		+col(1)
+	.site-descr
+		display: block
+		margin: 0 auto 20px auto
+		+fz-small
+	.main-article__title
+		margin-bottom: 20px
+	.urgent-articles-box
+		padding-top: 0
+	.urgent-article
+		font-size: 18px
+		line-height: 23.62px
+	.cat-img, .ques-box
+		margin-bottom: 10px
+	.ques-right
+		padding-top: 25px
+		text-align: center
+		h2 
+			margin-bottom: 10px
+		p
+			margin-bottom: 25px
+	.all-articles .img-box, 
+	.ra-article__img-box
+		height: 165px
+	.popular-articles .img-box
+		height: 196px
+	.main-photo .img-box
+		height: 211px
+	.content-grad
+		width: 153px
+	.footer-wrapper
+		max-width: 485px
+		margin: 0 auto
+	.copy-text
+		max-width: 290px
+		margin: 10px auto 15px
+	.footer-mail
+		display: block
+		text-align: center
+
+	/* article */
+	.popular-article-col
+		+col(1)
+	.article-page,
+	.popular-articles h3 
+		font-size: 22px
+		line-height: 26.4px
+
+	.popular-articles h3 
+		font-family: 'Futura PT Medium'
+	.article-photo
+		height: 144px
+	.comment-author
+		position: absolute
+		top: 0 
+		left: 0
+
+	/* questions */
+	.banner
+		background-size: auto 217px
+		background-position: center bottom
+		padding: 30px 0 220px
+	.forms
+		padding: 35px 0
+	.ques-search-form
+		margin-bottom: 30px
+	.ask-ques-form
+		input, textarea
+			width: 100%
+	.ques-answer 
+		margin-top: 30px
+		div
+			padding: 10px 20px 
+	.ques-link
+		padding: 15px 20px 50px 
+	/* single question */
+	.go-to-ques
+		margin: 30px auto
+
+	/* 404 */
+	.go-to-home, .go-to-ques-page
+		max-width: 360px
+		width: 100%
+		display: block
+		margin: 0 auto 10px
+
+
+@media screen and (max-width: 724px)
+	.header
+		+flex-column
+	.main-article
+		margin-right: 0
+	.cats-top-item-row
+		+flex-wrap
+	.header-form 
+		input
+			height: 57px
+
+	/* article */
+	ul	li
+		&:before 
+			display: block
+	.read-also, .comment-input-box, .what-to-do
+		+flex-column
+	.comment-form__input
+		width: 100%
+	.commenter-name, .comment-time
+		+order(-1)
+	.reply
+		position: absolute
+		bottom: -30px
+		right: 0
+	.commentmetadata
+		margin-bottom: 60px
+	.commenter-name,.comment-time
+		display: block
+		padding-left: 100px
+	.commenter-name
+		margin: 15px 0 10px
+	.comment-time
+		width: 100%
+		margin-bottom: 20px
+	.in-cat__link
+		margin-bottom: 15px
+
+@media screen and (min-width: 725px)
+	.wrapper
+		max-width: 100%
+	.all-articles-col
+		+col(2)
+	.cats-top-col, .cat-bottom-col
+		+col(3)
+	.logo-box
+		text-align: left
+	.site-descr
+		margin-bottom: 0
+	.main-article
+		width: 48%
+	.urgent-articles-box
+		max-width: 46%
+	.ques-left
+		background-size: contain
+		width: 100%
+	.ques-right
+		margin: 0 auto
+		width: 600px
+	.popular-article-col
+		+col(2)
+	.popular-articles h3 
+		font-family: 'Futura PT'
+	.main-photo .img-box
+		height: 259px
+	.all-articles
+		+justify-between
+	.footer .form 
+		max-width: 100%
+	.footer .logo-box
+		text-align: center
+
+	/* article */
+	.article-page
+	.content-grad
+		width: 210px
+		+fz-normal
+	.article-photo
+		height: 369px
+	.content-grad
+		right: 15px
+	.ra-article
+		width: 48%
+	.ra-article__img-box
+		border-radius: 10px
+		margin-bottom: 30px
+	.submit-grad
+		width: 283px
+	.comment-form__input
+		width: 50%
+	.comment-input-box input[type="text"]
+		margin-right: 8px
+	.commentmetadata
+		padding-left: 110px 
+	.comment-time
+		margin-right: 20px
+	.comments-box
+		max-width: 650px
+
+	/* questions */
+	.banner
+		background-size: auto 95%
+		background-position: right bottom
+		padding: 50px 0
+	.banner__title 
+		width: 295px
+	.banner__text
+		width: 50%
+	.ques-search-form
+		width: 486px
+		margin-left: auto
+		margin-right: auto
+	.ask-ques-form .ask-ques-email
+		width: 357px
+	.ask-ques-form .ques-answer-btn
+		width: 230px
+	.ques-answer 
+		position: fixed
+		bottom: 60px
+		right: 20px
+		z-index: 2
+		width: 300px
+	.ques-link
+		max-width: 945px
+		padding: 15px 15% 15px 30px
+		&:after
+			left: 90%
+			top: calc(50% - 16px)
+	.go-to-ques
+		width: 389px
+		margin: 0
+
+	/* 404 */
+	.go-to-home
+		margin-right: 10px
+
+@media screen and (min-width: 819px)
+	/* questions */
+	.ask-ques-form
+		max-width: 731px
+	.banner
+		padding-left: 40px
+@media screen and (max-width: 919px)
+	.all-articles
+		&:nth-child(2n)
+			margin-right: 0
+	.ques-box
+		+flex-wrap
+	.footer-wrapper
+		+flex-wrap
+	.footer
+		.form
+			+order(1)
+			margin: 20px auto
+			width: 100%
+			max-width: 486px
+		.menu
+			+order(3)
+		.footer-email
+			+order(2)
+
+	/* article */
+	.d-none
+		display: none!important
+	.content-hidden
+		max-width: 400px
+		width: 100%
+		height: 100%
+		padding: 40px 20px 15px
+		border-radius: 10px
+		background: #ffffff
+		position: fixed
+		right: 0
+		bottom: 0
+		z-index: 3
+	.content-btn
+		+btn(true, true, false)
+		+fz-smaller
+		width: 100%
+
+	.content-close-btn
+		background: url(../images/icons/close.png) center no-repeat
+		width: 20px
+		height: 20px
+		position: absolute
+		right: 15px
+		top: 10px
+		cursor: pointer
+
+@media screen and (min-width: 920px)
+	.all-articles-col, .popular-article-col
+		+col(3)
+	.popular-articles h3 
+		+fz-normal
+	.all-articles .cat, .article-item__text
+		text-align: left
+
+	/* footer */
+	.footer-wrapper
+		max-width: 100%
+	.footer .logo-box
+		width: 165px
+	.footer .logo-box, .footer-email, .menu, .footer-mail
+		text-align: left
+	.footer-email, .menu
+		width: 260px
+	.footer .logo-box, .footer-email, .menu
+		margin-right: 30px
+	.footer .form
+		width: 360px
+	.footer .logo-box
+		-ms-flex-negative: 0
+		flex-shrink: 0
+	/* question */
+	.ques-left
+		margin-right: 30px
+		max-width: 653px
+	.ques-right
+		padding-top: 20px
+
+	/* article */
+	.article-photo
+		height: 375px
+	.content-grad, .content-close-btn
+		display: none
+	.article-box
+		+d-flex
+	.content
+		width: 360px
+		padding-top: 30px
+		margin-left: 30px
+		-ms-flex-negative: 0
+		flex-shrink: 0
+	.sticky-content 
+		.content-hidden
+			position: fixed
+			top: 30px
+			height: 400px
+			width: 360px
+	.article-bottom, .article
+		max-width: 750px
+	.comment-form-box
+		width: 557px
+	.comment-input-box input[type="text"]
+		width: 235px
+	.comment-input-box input[type="email"]
+		width: 100%
+
+	/* questions */
+	.ques-link
+		padding: 15px 17% 15px 100px
+		&:after 
+			left: 87%
+	.ques-answer
+		width: 262px
+
+	/* single question */
+	.go-to-ques
+		margin: 30px 0
+
+	/* 404 */
+	.go-to-home, .go-to-ques-page
+		max-width: 260px
+		margin: 0 auto
+	.what-to-do
+		width: 580px
+		margin: 0 auto
+
+@media screen and (max-width: 1169px)
+	.cat-left
+		text-align: center
+		+order(1)
+	.cat-item
+		+flex-column
+	.cat-extra-img-box
+		display: none
+	.cats-bottom
+		+flex-wrap
+
+@media screen and (min-width: 1170px)
+	.wrapper
+		max-width: 1140px
+		padding: 0
+	.all-articles-col
+		+col(4)
+	.main-photo .img-box
+		height: 368px
+	.footer-mail
+		display: initial
+	.ques-right
+		text-align: left
+		padding-top: 60px
+		h2, p 
+			margin-bottom: 10px
+	.cats-top, .cats-box
+		margin-bottom: 30px
+	.cat-img
+		margin-right: 0
+		margin-left: 10px 
+
+	/* questions */
+	.banner
+		padding: 140px 0 140px 100px
+	.banner__title	
+		width: unset
+	.banner__text
+		width: 457px
+
