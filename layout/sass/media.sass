@@ -3,7 +3,7 @@
 	.wrapper
 		padding: 0 15px
 		max-width: 530px
-	.mixed, .cats-box, .popular-articles, .commentmetadata
+	.cats-box, .popular-articles, .commentmetadata
 		+flex-wrap
 	.logo-box, .footer .logo-box, .footer-email, .menu
 		width: unset
@@ -73,6 +73,8 @@
 		position: absolute
 		top: 0 
 		left: 0
+	.ra-article a 
+		display: block
 
 	/* questions */
 	.banner
@@ -153,8 +155,8 @@
 		text-align: left
 	.site-descr
 		margin-bottom: 0
-	.main-article
-		width: 48%
+	.main-article__title, .article-short-text
+		width: 85%
 	.urgent-articles-box
 		max-width: 46%
 	.ques-left
@@ -187,9 +189,6 @@
 		right: 15px
 	.ra-article
 		width: 48%
-	.ra-article__img-box
-		border-radius: 10px
-		margin-bottom: 30px
 	.submit-grad
 		width: 283px
 	.comment-form__input
@@ -202,7 +201,8 @@
 		margin-right: 20px
 	.comments-box
 		max-width: 650px
-
+	.comment-text
+		width: 100%
 	/* questions */
 	.banner
 		background-size: auto 95%
@@ -239,19 +239,31 @@
 	/* 404 */
 	.go-to-home
 		margin-right: 10px
-
+@media screen and (max-width: 818.99px)
+	.mixed
+		+flex-wrap
+	.main-article, .urgent-articles-box
+		margin:
+			left: auto
+			right: auto
+	.urgent-articles-box
+		max-width: 653px
 @media screen and (min-width: 819px)
 	/* questions */
 	.ask-ques-form
 		max-width: 731px
 	.banner
 		padding-left: 40px
+	.urgent-articles-box
+		min-width: 360px
 @media screen and (max-width: 919px)
+	
 	.all-articles
 		&:nth-child(2n)
 			margin-right: 0
-	.ques-box
-		+flex-wrap
+	.popular-articles .article-item__text
+		text-align: left
+	.ques-box, 
 	.footer-wrapper
 		+flex-wrap
 	.footer
@@ -300,7 +312,6 @@
 		+fz-normal
 	.all-articles .cat, .article-item__text
 		text-align: left
-
 	/* footer */
 	.footer-wrapper
 		max-width: 100%

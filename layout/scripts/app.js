@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-	let contentBtn = document.querySelector('.content-btn')
+	const contentBtn = document.querySelector('.content-btn')
 	if(contentBtn) {
 		contentBtn.addEventListener('click', (e) => {
 			let content = document.querySelector('.content-hidden');
@@ -62,20 +62,59 @@ document.addEventListener('DOMContentLoaded', function(){
 		new Writer(root);
 	}
 
-	/* scroll to heading */
-	const anchors = document.querySelectorAll('.content-menu a[href*="#"]')
+	/* create content menu */
+	const container = document.querySelector('.content-menu-box');
+	if(container) {
+		let article = document.querySelector('.article');
+	    let headings = article.querySelectorAll('h2, h3');
+	    if(headings.length) {
+			let ol = document.createElement('ol');
+			ol.classList.add('content-menu');
+			let list = '';
 
-	for (let anchor of anchors) {
-	  anchor.addEventListener('click', function (e) {
-	    e.preventDefault()
-	    
-	    const blockID = anchor.getAttribute('href').substr(1)
-	    
-	    document.getElementById(blockID).scrollIntoView({
-	      behavior: 'smooth',
-	      block: 'start'
-	    })
-	  })
+			for(let i = 0, length = headings.length; i < length; i++) {
+				if(headings[i+1] && headings[i+1].nodeName === 'H3' && headings[i].nodeName !== 'H3'){
+					list += '<li><a href="#si-'+i+1+'">'+headings[i].innerText+'</a>';
+					headings[i].innerHTML += '<span id="si-'+i+1+'" class="additional-padding"></span>';
+				} else if(headings[i-1] && headings[i-1].nodeName !== 'H3' && headings[i].nodeName === 'H3') {
+					list += '<ol>';
+					list += '<li><a href="#si-'+i+1+'">'+headings[i].innerText+'</a></li>';
+					headings[i].innerHTML += '<span id="si-'+i+1+'" class="additional-padding"></span>';
+				} else if( headings[i].nodeName === 'H3') {
+					list += '<li><a href="#si-'+i+1+'">'+headings[i].innerText+'</a></li>';
+					headings[i].innerHTML += '<span id="si-'+i+1+'" class="additional-padding"></span>';
+				} else if( headings[i-1] && headings[i-1].nodeName === 'H3' && headings[i].nodeName === 'H2'){
+					list += '</ol>'
+					list += '</li>';
+				}
+				else {					
+					list += '<li><a href="#si-'+i+1+'">'+headings[i].innerText+'</a></li>';
+					headings[i].innerHTML += '<span id="si-'+i+1+'" class="additional-padding"></span>';
+				}
+			}
+			ol.innerHTML += list
+	       	container.append(ol); 
+	    } else {
+			document.querySelector('.content').remove();
+		}
 	}
+
+	/* copy the text when clicking */
+	const email = document.querySelector('.footer-mail');
+	if(email) {
+		email.addEventListener('click', function (e) {
+			let tempInput = document.createElement("input");
+			tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+			tempInput.value = this.innerText;
+			document.body.appendChild(tempInput);
+			tempInput.select();
+			let is_copied = document.execCommand("copy");
+			if(is_copied) {
+				this.innerText = 'Скопировано';
+				document.body.removeChild(tempInput);
+			}
+		});
+	}
+
 })
 
